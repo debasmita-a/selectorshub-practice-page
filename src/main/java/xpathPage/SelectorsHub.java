@@ -32,15 +32,35 @@ public class SelectorsHub {
 	
 	By datePicker = By.id("datepicker");	
 	By calendar = By.name("the_date");
-	
+	//shadow dom elements :
+	By learningHubLink = By.xpath("//a[@class='learningHub']");
+	By userNameField = By.id("kils");
+	By svgElement = By.xpath("//*[local-name()='svg' and @focusable='false']");
 	By shadowDomInsideIFrameLink = By.xpath("//a[contains(text(),'shadow dom inside iframe')]");
 	By iFrameInsideShadowDom = By.xpath("//a[contains(text(),'iframe inside shadow dom')]");
+	By pizzaField = By.id("pizza");
+	By conceptTest = By.id("training");
+	By learnXPathLinkClick = By.linkText("Learn XPath & Advance Automation Concepts");
+	By passwordField = By.id("pwd");
 	
+	//html user table -01:
 	By tableWithScroll = By.id("tableWrapper");
 	By resultTable = By.id("resultTable");
 	By allHeaders = By.xpath("//table[@id='resultTable']/thead//th//a"); //Use a HashMap
 	By allUserRows = By.xpath("//table[@id='resultTable']/tbody//tr"); 
 	
+	//alerts :
+	By windowAlert = By.xpath("//button[text()='Click To Open Window Alert']");
+	By windowPromtAlert = By.xpath("//button[text()='Click To Open Window Prompt Alert']");
+	
+	//modal :
+	By openModalBtn = By.xpath("//button[@id='myBtn']");
+	By modalCloseBtn = By.xpath("//div[@id='myModal']//div[@class='modal-header']//span");
+	By modalBodyElements = By.xpath("//div[@id='myModal']//div[@class='modal-body']//p");
+	By modalHeaders = By.xpath("//div[@id='myModal']//a");
+	
+	//html system distribution table -02 :
+	By table2 = By.id("tablepress-1"); //scroll down to table
 	// ************************ public constructor to initialize WenDriver ******************
 	
 	public SelectorsHub(WebDriver driver) {
@@ -106,8 +126,6 @@ public class SelectorsHub {
 		doSendKeys(enterFirstName, fname);
 		System.out.println(getElement(enterLastName).isEnabled());
 	}
-	
-	
-	
+		
 	
 }
