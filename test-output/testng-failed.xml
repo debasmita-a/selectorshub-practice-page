@@ -5,7 +5,7 @@
     <classes>
       <class name="xpathPageTest.SelectorsHubTest">
         <methods>
-          <include name="clickOnSVGElementTest"/>
+          <include name="getAllWindowHandlesTest" invocation-numbers="1 2"/>
           <include name="setup"/>
         </methods>
       </class> <!-- xpathPageTest.SelectorsHubTest -->
